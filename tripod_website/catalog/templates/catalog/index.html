@@ -1,0 +1,12 @@
+{% extends 'catalog/base.html' %}
+{% block content %}
+<h1>Sculpture Catalog</h1>
+<ul>
+    {% for sculpture in sculptures %}
+        <li>
+            <a href="{% url 'sculpture_detail' sculpture.pk %}">{{ sculpture.title }}</a>
+            by {{ sculpture.artist }}
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

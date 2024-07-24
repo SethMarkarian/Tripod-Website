@@ -1,0 +1,8 @@
+{% extends 'catalog/base.html' %}
+{% block content %}
+<h1>{{ sculpture.title }}</h1>
+<p>Artist: {{ sculpture.artist }}</p>
+<p>{{ sculpture.description }}</p>
+<p>Price: ${{ sculpture.price }}</p>
+<img src="{{ sculpture.image.url }}" alt="{{ sculpture.title }}">
+{% endblock %}
